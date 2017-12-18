@@ -1,0 +1,8 @@
+# Editor files
+.vscode
+
+# Node modules
+node_modules/
+
+# Output folder
+dist/
