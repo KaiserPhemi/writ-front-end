@@ -1,8 +1,16 @@
 # Editor files
 .vscode
+.DS_Store
 
 # Node modules
 node_modules/
 
+# transpiled files
+src/server-transpiled.js
+
 # Output folder
 dist/
+
+# environment settings
+.env
+.gitignore
