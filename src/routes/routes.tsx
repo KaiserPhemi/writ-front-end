@@ -11,25 +11,19 @@ import LandingPage from '../pages/LandingPage';
 
 /**
  * All routes defined here
- * 
- * @param {obj} store 
+ *
+ * @param {obj} store
  * @returns {any}
  */
 const Root = ({ store }): any => {
   return(
     <Provider store={store}>
       <Router>
-        <Route exact path="/" component={App} />
-        <Route exact path="/" component={LandingPage} />
-        {/* <Route path="signup" component={SignUpPage} />
-        <Route path="about" component={About} />
-        <Route path="login" component={Login} />
-        <Route path="document" component={ManageDocumentPage} />
-        <Route path="document/:id" component={ManageDocumentPage} />
-        <Route path="document/:id/edit" component={DocumentEdit} />
-        <Route path="user" component={UsersPage} />
-        <Route path="document/:id/details" component={DocumentDetailsPage} />
-        <Route path="editprofile" component={ProfilePage} /> */}
+        <Switch>
+          <Route exact path="/" component={App} />
+          <Route exact path="/" component={LandingPage} />
+
+        </Switch>
       </Router>
     </Provider>
   );

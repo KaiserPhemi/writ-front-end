@@ -8,8 +8,6 @@ const SliderComponent: React.SFC<any> = () => {
     <label className='switch'>
       <input
         type='checkbox'
-        defaultChecked={defaultChecked}
-        onChange={onChange}
       />
       <span className='slider round' />
     </label>

@@ -5,7 +5,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import toastr from 'toastr';
-import * as  moment from 'moment';
+// import * as  moment from 'moment';
 import { bindActionCreators } from 'redux';
 import swal from 'sweetalert';
 
@@ -35,14 +35,14 @@ class ListRow extends React.Component<any, any> {
       user: any = this.state.user;
     user[field] = event.target.value;
     this.setState({ user });
-    this.props.actions.updateUser(user)
+    this.props.actions.updateUser(user);
     toastr.success('Role was updated successfully');
     this.context.router.push('/user');
   }
 
   /**
-   * 
-   * @param userid 
+   *
+   * @param userid
    */
   public deleteUser = (userid) => {
     swal({
@@ -84,7 +84,6 @@ class ListRow extends React.Component<any, any> {
             onChange={this.onChange} /> : <span>{user.role.title}</span>
           }
         </td>
-        <td>{moment(user.createdAt).format('DD-MM-YYYY')}</td>
         <td>{authenticate.user.userId !== user.id &&
           <Link
             to="/user"

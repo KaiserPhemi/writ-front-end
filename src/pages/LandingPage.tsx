@@ -24,8 +24,8 @@ class LandingPage extends React.Component<ILandingPageProps, ILandingPageState> 
 
 
   public componentDidMount() {
-    console.log("this is the props: ", this.props);
-    console.log("this is the state: ", this.state)
+    console.log('this is the props: ', this.props);
+    console.log('this is the state: ', this.state);
   }
 
   /**
@@ -33,7 +33,6 @@ class LandingPage extends React.Component<ILandingPageProps, ILandingPageState> 
    * @return {any}
    */
   public render() {
-    // const { isAuthenticated } = this.props.auth;
     const isAuthenticated = false;
     return (
       <div className="main">

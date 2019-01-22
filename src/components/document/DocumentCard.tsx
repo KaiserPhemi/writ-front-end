@@ -1,5 +1,5 @@
 // react libraries
-import React, { Component } from 'react';
+import * as React from 'react';
 
 // third-party libraries
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ import {
  * @class DocumentCard
  * @return {any}
  */
-class DocumentCard extends Component<IDocumentCardProps, IDocumentCardState> {
+class DocumentCard extends React.Component<IDocumentCardProps, IDocumentCardState> {
   constructor(props) {
     super(props);
   }

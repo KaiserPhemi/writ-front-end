@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import { INavigationBarProps, INavigationBarState } from '../interfaces/navigationBar';
 /**
  * Handles all element within the navigation bar
- * 
+ *
  * @class NavigationBar
  * @return {any}
  */
@@ -21,7 +21,7 @@ export class NavigationBar extends React.Component<any, any> {
 
   /**
    * Handles logout events
-   * 
+   *
    * @member NavigationBar
    * @param {Object} event - Event trigered
    */
@@ -31,13 +31,19 @@ export class NavigationBar extends React.Component<any, any> {
     this.context.router.push('/');
   }
 
+  public componentDidMount() {
+    console.log(this.props);
+  }
+
   /**
    * Renders to the DOM
-   * 
+   *
    * @return {Object}
    */
   public render() {
-    const { isAuthenticated, user } = this.props.auth;
+    const isAuthenticated = false,
+      user = {};
+    console.log(this.props);
 
     return (
       <header>
@@ -60,9 +66,9 @@ export class NavigationBar extends React.Component<any, any> {
                 {!isAuthenticated
                   && <Link id="login" to="/login">Login</Link>}
               </li>
-              {user.roleId === 1
-                && <li><Link to="/user"><span>Users</span></Link></li>
-              }
+
+              <li><Link to="/user"><span>Users</span></Link></li>
+
               {isAuthenticated
                 && <li><Link id="profile" to="/editprofile">Profile</Link></li>
               }
@@ -85,9 +91,9 @@ export class NavigationBar extends React.Component<any, any> {
                   && <Link to="/login">Login</Link>
                 }
               </li>
-              {user.roleId === 1
-                && <li><Link to="/user" id="users-list"><span>Users</span></Link></li>
-              }
+
+                <li><Link to="/user" id="users-list"><span>Users</span></Link></li>
+
               {isAuthenticated
                 && <li><Link id="profile" to="/editprofile">Profile</Link></li>
               }
@@ -116,7 +122,7 @@ export class NavigationBar extends React.Component<any, any> {
 
 const mapStateToProps = (state) => {
   return {
-    auth: state.auth
+    auth: state.authReducer
   };
 };
 

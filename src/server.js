@@ -44,5 +44,5 @@ app.get('*', (request, response) => {
 
 // create server and listen on port
 app.listen(port, err => {
-  err ? winston.log(err) : open(`http://localhost:${port}`);
+  err ? winston.log(err) : console.log(`http://localhost:${port}`);
 });
