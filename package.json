@@ -87,6 +87,7 @@
     "redux-devtools-extension": "^2.13.2",
     "redux-test-utils": "^0.2.2",
     "tslint-eslint-rules": "^4.1.1",
+    "tslint-react": "^3.6.0",
     "webpack-dev-middleware": "^2.0.3",
     "webpack-hot-middleware": "^2.21.0"
   }
