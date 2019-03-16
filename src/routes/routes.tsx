@@ -6,8 +6,11 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
 
 // components
-import App from '../pages/App.component';
+import HomePage from '../pages/HomePage';
 import LandingPage from '../pages/LandingPage';
+
+// checks if logged-in
+const loggedIn = false;
 
 /**
  * All routes defined here
@@ -15,13 +18,20 @@ import LandingPage from '../pages/LandingPage';
  * @param {obj} store
  * @returns {any}
  */
-const Root = ({ store }): any => {
+const Root = ({ store }) => {
   return(
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route path="/" exact component={App} />
-          <Route path="/" exact component={LandingPage} />
+          <Route
+            path="/"
+            exact
+            render={() => (
+              loggedIn
+                ? <HomePage />
+                : <LandingPage />
+            )}
+          />
         </Switch>
       </Router>
     </Provider>

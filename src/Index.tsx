@@ -3,17 +3,16 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 // routes
-import Root from './routes/routes';
+import App from './pages/App';
 
 // store
 import configureStore from './store/store';
-
-const store: any = configureStore({});
+const store = configureStore({});
 
 /**
  * @desc Main entry point for  app
  */
 ReactDOM.render(
-  <Root store={store} />,
+  <App />,
   document.getElementById('root')
 );
