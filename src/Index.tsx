@@ -1,14 +1,6 @@
 // react libraries
 import * as React from 'react';
-
-// third party libraries
-import { render } from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import jwtDecode from 'jwt-decode';
-
-// polyfill for older browser
-import 'raf/polyfill';
+import * as ReactDOM from 'react-dom';
 
 // routes
 import Root from './routes/routes';
@@ -21,7 +13,7 @@ const store: any = configureStore({});
 /**
  * @desc Main entry point for  app
  */
-render(
+ReactDOM.render(
   <Root store={store} />,
   document.getElementById('root')
 );
