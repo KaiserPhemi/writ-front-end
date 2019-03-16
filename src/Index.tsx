@@ -16,7 +16,7 @@ import Root from './routes/routes';
 // store
 import configureStore from './store/store';
 
-const store = configureStore({});
+const store: any = configureStore({});
 
 /**
  * @desc Main entry point for  app

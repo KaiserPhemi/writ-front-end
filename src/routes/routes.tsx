@@ -3,7 +3,7 @@ import * as React from 'react';
 
 // third-party libraries
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Link, Route, Switch  } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
 
 // components
 import App from '../pages/App.component';
@@ -20,9 +20,8 @@ const Root = ({ store }): any => {
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route exact path="/" component={App} />
-          <Route exact path="/" component={LandingPage} />
-
+          <Route path="/" exact component={App} />
+          <Route path="/" exact component={LandingPage} />
         </Switch>
       </Router>
     </Provider>

@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "*": ["types/*"] },
     "experimentalDecorators": true,
     "sourceMap": true,
-    "target": "es5",  
-    "jsx": "react",                                        
+    "target": "es2015",
+    "jsx": "react",
     "lib": ["es2015", "dom"],
     "typeRoots": ["node_modules/@types"]
   },
