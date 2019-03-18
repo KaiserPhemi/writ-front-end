@@ -34,12 +34,17 @@
     "@types/react-dom": "^16.8.2",
     "@types/react-redux": "^7.0.3",
     "@types/react-router-dom": "^4.3.1",
+    "css-loader": "^2.1.1",
+    "history": "^4.9.0",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "webpack-md5-hash": "^0.0.6"
   }
 }
