@@ -13,17 +13,20 @@ if (workingEnv === 'development') {
 }
 
 // initial state and middleware
-const initialState = {};
-const middlewares: any[] = workingEnv === 'production' ?
-                            [thunk] : [thunk, reduxImmutableStateInvariant()];
+const initialState: any = {};
+const middlewares = workingEnv === 'production'
+  ? [thunk]
+  : [thunk, reduxImmutableStateInvariant()];
+
 /**
  * @export
  * @param {obj} {}
- * @returns {any} 
+ * @returns {any}
  */
 const configureStore = ({}) => {
-  const middleware = (workingEnv === 'development') ?
-                      devModule.composeWithDevTools(applyMiddleware(...middlewares)) :
+  const middleware = (workingEnv === 'development')
+    ? devModule.composeWithDevTools(applyMiddleware(...middlewares))
+    :
                       applyMiddleware(...middlewares);
   return createStore(
     rootReducer,
