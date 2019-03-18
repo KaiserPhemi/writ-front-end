@@ -4,4 +4,14 @@
   display: flex;
   justify-content: space-between;
   border-bottom: $main-border;
+  padding: 14px;
+
+  .main-logo-container {
+    cursor: pointer;
+
+    .home-logo {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 }

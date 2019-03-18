@@ -1,13 +1,20 @@
 // react libraries
 import * as React from 'react';
 
+// fixtures
+import {imgUrl} from '../../../fixtures/imgUrl';
+
 /**
  * @desc
  */
 const HomeLogo:React.SFC  = () => {
   return (
     <div className='main-logo-container'>
-      <img src="" alt=""/>
+      <img
+        className='home-logo'
+        src={imgUrl}
+        alt="home-logo"
+      />
     </div>
   )
 }
