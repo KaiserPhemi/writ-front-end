@@ -1,3 +1,7 @@
+@import '../defaultStyles/default';
+
 .main-navigation-bar {
-  
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $main-border;
 }
