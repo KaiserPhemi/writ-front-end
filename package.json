@@ -8,7 +8,7 @@
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
     "start": "webpack-dev-server --mode development --open",
-    "test": "jest --verbose --coverage",
+    "test": "jest",
     "test:watch": "npm test -- --watch",
     "copy:html": "cp src/index.html dist/",
     "copy:images": "cp assets/images/* dist/",

@@ -30,13 +30,20 @@ class NavigationBar extends React.Component<INavigationBarProps, INavigationBarS
   }
 
   /**
+   * @desc performs the necesarry operation on query
+   */
+  private searchQuery = (evt) => {
+    console.log(evt.target.value);
+  }
+
+  /**
    * @desc renders to the DOM
    */
   public render() {
     return (
       <nav className='main-navigation-bar'>
         <HomeLogo onClick={this.redirectOnClick}/>
-        <SearchBar />
+        <SearchBar onSubmit={this.searchQuery}/>
         <div>Menu List</div>
       </nav>
     );
