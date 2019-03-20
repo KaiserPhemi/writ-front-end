@@ -16,7 +16,20 @@ describe('Search Bar component', () => {
     expect(wrapper.find('.main-search-bar')).to.have.lengthOf(1);
   });
 
-  it('should contain a form element', () => { });
-  it('should contain a form element', () => { });
-  it('should contain a form element', () => { });
+  it('should contain a label DOM element', () => {
+    expect(wrapper.contains(<label></label>)).to.exist;
+  });
+
+  it('should contain an input element', () => {
+    expect(wrapper.contains(<input />)).to.exist;
+  });
+
+  it('should contain an span element', () => {
+    expect(wrapper.contains(<span />)).to.exist;
+  });
+
+  it('should render search icon', () => {
+    expect(wrapper.contains(<i />)).to.exist;
+    expect(wrapper.find('.search-icon')).to.have.lengthOf(1);
+  });
 });
