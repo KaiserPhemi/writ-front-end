@@ -1,5 +1,4 @@
-
-[![Coverage Status](https://coveralls.io/repos/github/KaiserPhemi/doqman-dms-fend/badge.svg?branch=master)](https://coveralls.io/github/KaiserPhemi/doqman-dms-fend?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/KaiserPhemi/doqman-dms-fend/badge.svg?branch=master)](https://coveralls.io/github/KaiserPhemi/doqman-dms-fend?branch=develop)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6253ec325905f3db9234/maintainability)](https://codeclimate.com/github/KaiserPhemi/doqman-dms-fend/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/6253ec325905f3db9234/test_coverage)](https://codeclimate.com/github/KaiserPhemi/doqman-dms-fend/test_coverage)
 [![CircleCI](https://circleci.com/gh/KaiserPhemi/doqman-dms-fend.svg?style=svg&circle-token=b33294a27e4bc6354547490dccf4348edda04169)](https://circleci.com/gh/KaiserPhemi/doqman-dms-fend)
