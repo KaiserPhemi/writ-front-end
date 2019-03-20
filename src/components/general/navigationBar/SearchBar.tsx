@@ -7,7 +7,7 @@ import * as React from 'react';
 class SearchBar extends React.Component {
   public render() {
     return (
-      <div className='main-search-bar'>
+      <form className='main-search-bar'>
         <label htmlFor="search-bar">
           <input
             type="text"
@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
           />
           <span>search-icon</span>
         </label>
-      </div>
+      </form>
     );
   }
 }
