@@ -33,7 +33,8 @@ class NavigationBar extends React.Component<INavigationBarProps, INavigationBarS
    * @desc performs the necesarry operation on query
    */
   private searchQuery = (evt) => {
-    console.log(evt.target.value);
+    evt.preventDefault();
+    console.log('We got here', evt.target.value);
   }
 
   /**

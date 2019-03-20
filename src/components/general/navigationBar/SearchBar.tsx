@@ -10,7 +10,10 @@ class SearchBar extends React.Component<any> {
     const { onSubmit }: any = this.props;
 
     return (
-      <form className='main-search-bar'>
+      <form
+        className='main-search-bar'
+        onSubmit={onSubmit}
+      >
         <label htmlFor="search-bar">
           <input
             className='search-field'
