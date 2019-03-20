@@ -14,4 +14,24 @@
       height: 1.5rem;
     }
   }
+
+  // search bar styling
+  .main-search-bar {
+
+    label {
+      border: $main-border;
+      padding: 5px;
+      border-radius: 3px;
+
+      // search input field
+      .search-field {
+        border: none;
+        width: 20rem;
+      }
+
+      .search-icon {
+        cursor: pointer;
+      }
+    }
+  }
 }

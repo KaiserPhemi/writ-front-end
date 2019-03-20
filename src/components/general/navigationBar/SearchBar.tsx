@@ -4,18 +4,39 @@ import * as React from 'react';
 /**
  * @desc
  */
-class SearchBar extends React.Component {
+class SearchBar extends React.Component<any> {
+
+  /**
+   * @desc
+   */
   public render() {
+    const {
+      onSubmit,
+      onChange,
+      initialValue,
+    }: any = this.props;
+
     return (
-      <div className='main-search-bar'>
+      <form
+        className='main-search-bar'
+        onSubmit={onSubmit}
+      >
         <label htmlFor="search-bar">
           <input
+            className='search-field'
             type="text"
             placeholder="Search...."
+            onChange={onChange}
+            value={initialValue}
           />
-          <span>search-icon</span>
+          <span
+            className='search-icon'
+            onClick={onSubmit}
+          >
+            <i className="fas fa-search" />
+          </span>
         </label>
-      </div>
+      </form>
     );
   }
 }
