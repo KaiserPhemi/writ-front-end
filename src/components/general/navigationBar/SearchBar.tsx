@@ -6,8 +6,15 @@ import * as React from 'react';
  */
 class SearchBar extends React.Component<any> {
 
+  /**
+   * @desc
+   */
   public render() {
-    const { onSubmit }: any = this.props;
+    const {
+      onSubmit,
+      onChange,
+      initialValue,
+    }: any = this.props;
 
     return (
       <form
@@ -19,6 +26,8 @@ class SearchBar extends React.Component<any> {
             className='search-field'
             type="text"
             placeholder="Search...."
+            onChange={onChange}
+            value={initialValue}
           />
           <span
             className='search-icon'

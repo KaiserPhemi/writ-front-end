@@ -23,6 +23,13 @@ import './navBar.scss';
 class NavigationBar extends React.Component<INavigationBarProps, INavigationBarState> {
 
   /**
+   * @desc state object
+   */
+  state = {
+    queryParam: ''
+  }
+
+  /**
    * @desc this redirects the app to the home page
    */
   private redirectOnClick = () => {
@@ -34,17 +41,30 @@ class NavigationBar extends React.Component<INavigationBarProps, INavigationBarS
    */
   private searchQuery = (evt) => {
     evt.preventDefault();
-    console.log('We got here', evt.target.value);
+    const { queryParam } = this.state;
+  }
+
+  /**
+   * @desc
+   */
+  private queryValue = (evt) => {
+    return this.setState({ queryParam: evt.target.value });
   }
 
   /**
    * @desc renders to the DOM
    */
   public render() {
+    const { queryParam } = this.state;
+
     return (
       <nav className='main-navigation-bar'>
         <HomeLogo onClick={this.redirectOnClick}/>
-        <SearchBar onSubmit={this.searchQuery}/>
+        <SearchBar
+          onSubmit={this.searchQuery}
+          onChange={this.queryValue}
+          initialValue={queryParam}
+        />
         <div>Menu List</div>
       </nav>
     );

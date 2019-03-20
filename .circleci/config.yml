@@ -37,8 +37,6 @@ jobs:
       - store_artifacts:
           path: coverage
 
-      - codecov:
-          file: lcov.info
 
 
 
