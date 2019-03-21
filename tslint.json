@@ -21,6 +21,7 @@
       "completed-docs": false,
       "no-unused-expression": false,
       "no-default-export": false,
+      "jsx-no-multiline-js": false,
       "no-implicit-dependencies": [true, "dev"],
       "no-import-side-effect": [true, {"ignore-module": "(\\.html|\\.css|\\.scss)$"}],
       "no-unsafe-any": false,

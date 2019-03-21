@@ -7,6 +7,8 @@ import { INavigationBarState } from '../../../interfaces/navigationBar';
 // components
 import HomeLogo from './HomeLogo';
 import SearchBar from './SearchBar';
+import ProfilePicture from './ProfilePicture';
+import NavBarMenu from './NavBarMenu';
 
 // history
 import history from '../../../fixtures/history';
@@ -31,6 +33,7 @@ class NavigationBar extends React.Component<any, INavigationBarState> {
    */
   public render() {
     const { queryParam } = this.state;
+    const isLoggedIn = false;
 
     return (
       <nav className='main-navigation-bar'>
@@ -40,7 +43,12 @@ class NavigationBar extends React.Component<any, INavigationBarState> {
           onChange={this.queryValue}
           initialValue={queryParam}
         />
-        <div className='profile-menu-list-wrapper'>menu-list</div>
+        <div className='profile-menu-list-wrapper'>
+          <NavBarMenu />
+          {
+            isLoggedIn ? <ProfilePicture /> : ''
+          }
+        </div>
       </nav>
     );
   }
