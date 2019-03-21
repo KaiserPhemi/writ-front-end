@@ -1,3 +1,6 @@
+/**
+ * @desc ISearchBoxProps
+ */
 export interface ISearchBoxProps {
-  onChange: () => void;
+  onChange(): void;
 }

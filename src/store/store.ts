@@ -9,6 +9,7 @@ import rootReducer from '../reducers';
 const workingEnv = process.env.NODE_ENV;
 let devModule;
 if (workingEnv === 'development') {
+  // tslint:disable-next-line:no-require-imports
   devModule = require('redux-devtools-extension');
 }
 
@@ -20,18 +21,17 @@ const middlewares = workingEnv === 'production'
 
 /**
  * @export
- * @param {obj} {}
- * @returns {any}
+ * @returns object
  */
 const configureStore = ({}) => {
   const middleware = (workingEnv === 'development')
     ? devModule.composeWithDevTools(applyMiddleware(...middlewares))
-    :
-                      applyMiddleware(...middlewares);
+    : applyMiddleware(...middlewares);
+
   return createStore(
     rootReducer,
     initialState,
-    middleware,
+    middleware
   );
 };
 

@@ -2,10 +2,7 @@
 import * as React from 'react';
 
 // interfaces
-import {
-  INavigationBarProps,
-  INavigationBarState
-} from '../../../interfaces/navigationBar';
+import { INavigationBarState } from '../../../interfaces/navigationBar';
 
 // components
 import HomeLogo from './HomeLogo';
@@ -18,38 +15,16 @@ import history from '../../../fixtures/history';
 import './navBar.scss';
 
 /**
- * @desc
+ * @desc handles all elements for navigation bar
  */
-class NavigationBar extends React.Component<INavigationBarProps, INavigationBarState> {
+class NavigationBar extends React.Component<any, INavigationBarState> {
 
   /**
    * @desc state object
    */
-  state = {
+  public state = {
     queryParam: ''
-  }
-
-  /**
-   * @desc this redirects the app to the home page
-   */
-  private redirectOnClick = () => {
-    return history.push('/');
-  }
-
-  /**
-   * @desc performs the necesarry operation on query
-   */
-  private searchQuery = (evt) => {
-    evt.preventDefault();
-    const { queryParam } = this.state;
-  }
-
-  /**
-   * @desc
-   */
-  private queryValue = (evt) => {
-    return this.setState({ queryParam: evt.target.value });
-  }
+  };
 
   /**
    * @desc renders to the DOM
@@ -65,9 +40,33 @@ class NavigationBar extends React.Component<INavigationBarProps, INavigationBarS
           onChange={this.queryValue}
           initialValue={queryParam}
         />
-        <div>Menu List</div>
+        <div>menu-list</div>
       </nav>
     );
+  }
+
+  /**
+   * @desc this redirects the app to the home page
+   * @returns history object
+   */
+  private redirectOnClick = () => {
+    return history.push('/');
+  }
+
+  /**
+   * @desc performs the necesary operation on query
+   * @param evt event object from event emitter
+   */
+  private searchQuery = (evt) => {
+    evt.preventDefault();
+  }
+
+  /**
+   * @desc stores the search query in the state
+   * @param evt event object from event emitter
+   */
+  private queryValue = (evt) => {
+    this.setState({ queryParam: evt.target.value });
   }
 }
 

@@ -9,7 +9,7 @@ const HomePage: React.SFC = () => {
     <div>
       <p>My home page after I logged in</p>
     </div>
-  )
-}
+  );
+};
 
 export default HomePage;

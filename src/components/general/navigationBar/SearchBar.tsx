@@ -13,7 +13,7 @@ class SearchBar extends React.Component<any> {
     const {
       onSubmit,
       onChange,
-      initialValue,
+      initialValue
     }: any = this.props;
 
     return (
@@ -21,19 +21,20 @@ class SearchBar extends React.Component<any> {
         className='main-search-bar'
         onSubmit={onSubmit}
       >
-        <label htmlFor="search-bar">
+        <label htmlFor='search-bar'>
           <input
             className='search-field'
-            type="text"
-            placeholder="Search...."
+            type='text'
+            placeholder='Search....'
             onChange={onChange}
             value={initialValue}
           />
           <span
+            role='button'
             className='search-icon'
             onClick={onSubmit}
           >
-            <i className="fas fa-search" />
+            <i className='fas fa-search' />
           </span>
         </label>
       </form>

@@ -1,6 +1,6 @@
 /**
- * @interface Root
+ * @desc IRoot
  */
-export interface Root {
+export interface IRoot {
   store: any;
 }

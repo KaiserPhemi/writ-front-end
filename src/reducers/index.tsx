@@ -6,5 +6,5 @@ import { documentReducer } from './documentReducer';
 
 // combined reducers
 export default combineReducers({
-  documentReducer,
+  documentReducer
 });

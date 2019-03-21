@@ -1,6 +1,6 @@
 /**
- * @interface IHomeLogoProps
+ * @desc IHomeLogoProps
  */
 export interface IHomeLogoProps {
-  onClick: () => void;
+  onClick(): void;
 }
