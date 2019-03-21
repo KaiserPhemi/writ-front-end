@@ -40,7 +40,7 @@ class NavigationBar extends React.Component<any, INavigationBarState> {
           onChange={this.queryValue}
           initialValue={queryParam}
         />
-        <div>menu-list</div>
+        <div className='profile-menu-list-wrapper'>menu-list</div>
       </nav>
     );
   }
@@ -49,15 +49,15 @@ class NavigationBar extends React.Component<any, INavigationBarState> {
    * @desc this redirects the app to the home page
    * @returns history object
    */
-  private redirectOnClick = () => {
-    return history.push('/');
+  private readonly redirectOnClick = () => {
+    history.push('/');
   }
 
   /**
    * @desc performs the necesary operation on query
    * @param evt event object from event emitter
    */
-  private searchQuery = (evt) => {
+  private readonly searchQuery = (evt) => {
     evt.preventDefault();
   }
 
@@ -65,7 +65,7 @@ class NavigationBar extends React.Component<any, INavigationBarState> {
    * @desc stores the search query in the state
    * @param evt event object from event emitter
    */
-  private queryValue = (evt) => {
+  private readonly queryValue = (evt) => {
     this.setState({ queryParam: evt.target.value });
   }
 }

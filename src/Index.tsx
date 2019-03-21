@@ -5,10 +5,6 @@ import * as ReactDOM from 'react-dom';
 // routes
 import App from './pages/App';
 
-// store
-import configureStore from './store/store';
-const store = configureStore({});
-
 /**
  * @desc Main entry point for  app
  */
