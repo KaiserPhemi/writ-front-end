@@ -5,9 +5,6 @@ import * as React from 'react';
 import Root from '../routes/routes';
 import NavigationBar from '../components/general/navigationBar/NavigationBar';
 
-// interfaces
-import { IAppProps } from '../interfaces/app';
-
 // store
 import configureStore from '../store/store';
 const store = configureStore({});
@@ -15,7 +12,7 @@ const store = configureStore({});
 /**
  * @desc
  */
-const App: React.SFC<IAppProps> = () => (
+const App: React.SFC = () => (
   <div className='main-container'>
     <NavigationBar />
     <div className='main-body-container'>

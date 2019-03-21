@@ -13,11 +13,12 @@ describe('Search Bar component', () => {
   const wrapper = shallow(<SearchBar />);
 
   it('should contain a form element', () => {
-    expect(wrapper.find('.main-search-bar')).to.have.lengthOf(1);
+    expect(wrapper.find('.main-search-bar')).to.have
+      .lengthOf(1);
   });
 
   it('should contain a label DOM element', () => {
-    expect(wrapper.contains(<label></label>)).to.exist;
+    expect(wrapper.contains(<label />)).to.exist;
   });
 
   it('should contain an input element', () => {
@@ -30,6 +31,7 @@ describe('Search Bar component', () => {
 
   it('should render search icon', () => {
     expect(wrapper.contains(<i />)).to.exist;
-    expect(wrapper.find('.search-icon')).to.have.lengthOf(1);
+    expect(wrapper.find('.search-icon')).to.have
+      .lengthOf(1);
   });
 });

@@ -1,11 +1,6 @@
 /**
- * @interface INavigationBarProps
- */
-export interface INavigationBarProps {
-}
-
-/**
- * @interface INavigationBarState
+ * @desc INavigationBarState
  */
 export interface INavigationBarState {
+  queryParam: string;
 }

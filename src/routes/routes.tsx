@@ -10,13 +10,11 @@ import HomePage from '../pages/HomePage';
 import LandingPage from '../pages/LandingPage';
 
 // checks if logged-in
-const loggedIn = false;
+const loggedIn = true;
 
 /**
- * All routes defined here
- *
- * @param {obj} store
- * @returns {any}
+ * @desc All routes defined here
+ * @param store redux store object
  */
 const Root = ({ store }) => {
   return(
@@ -24,13 +22,9 @@ const Root = ({ store }) => {
       <Router>
         <Switch>
           <Route
-            path="/"
-            exact
-            render={() => (
-              loggedIn
-                ? <HomePage />
-                : <LandingPage />
-            )}
+            path='/'
+            exact={true}
+            render={() => loggedIn ? <HomePage /> : <LandingPage />}
           />
         </Switch>
       </Router>
