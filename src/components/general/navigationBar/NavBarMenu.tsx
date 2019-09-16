@@ -13,7 +13,7 @@ class NavBarMenu extends React.Component {
    * @desc
    */
   public render() {
-    const isLoggedIn = false;
+    const isLoggedIn = true;
     const renderedArray = isLoggedIn
       ? userMenuList
       : globalMenuList;

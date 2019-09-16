@@ -1,31 +1,30 @@
 // react libraries
-import * as React from 'react';
+import * as React from "react";
 
 // interfaces
-import { INavigationBarState } from '../../../interfaces/navigationBar';
+import { INavigationBarState } from "../../../interfaces/navigationBar";
 
 // components
-import HomeLogo from './HomeLogo';
-import SearchBar from './SearchBar';
-import ProfilePicture from './ProfilePicture';
-import NavBarMenu from './NavBarMenu';
+import HomeLogo from "./HomeLogo";
+import SearchBar from "./SearchBar";
+import ProfilePicture from "./ProfilePicture";
+import NavBarMenu from "./NavBarMenu";
 
 // history
-import history from '../../../fixtures/history';
+import history from "../../../fixtures/history";
 
 // styles
-import './navBar.scss';
+import "./navBar.scss";
 
 /**
  * @desc handles all elements for navigation bar
  */
 class NavigationBar extends React.Component<any, INavigationBarState> {
-
   /**
    * @desc state object
    */
   public state = {
-    queryParam: ''
+    queryParam: ""
   };
 
   /**
@@ -33,21 +32,19 @@ class NavigationBar extends React.Component<any, INavigationBarState> {
    */
   public render() {
     const { queryParam } = this.state;
-    const isLoggedIn = false;
+    // const isLoggedIn = false;
 
     return (
-      <nav className='main-navigation-bar'>
-        <HomeLogo onClick={this.redirectOnClick}/>
+      <nav className="main-navigation-bar">
+        <HomeLogo onClick={this.redirectOnClick} />
         <SearchBar
           onSubmit={this.searchQuery}
           onChange={this.queryValue}
           initialValue={queryParam}
         />
-        <div className='profile-menu-list-wrapper'>
+        <div className="profile-menu-list-wrapper">
           <NavBarMenu />
-          {
-            isLoggedIn ? <ProfilePicture /> : ''
-          }
+          <ProfilePicture />
         </div>
       </nav>
     );
@@ -58,24 +55,24 @@ class NavigationBar extends React.Component<any, INavigationBarState> {
    * @returns history object
    */
   private readonly redirectOnClick = () => {
-    history.push('/');
+    history.push("/");
   }
 
   /**
    * @desc performs the necesary operation on query
    * @param evt event object from event emitter
    */
-  private readonly searchQuery = (evt) => {
+  private readonly searchQuery = evt => {
     evt.preventDefault();
-  }
+  };
 
   /**
    * @desc stores the search query in the state
    * @param evt event object from event emitter
    */
-  private readonly queryValue = (evt) => {
+  private readonly queryValue = evt => {
     this.setState({ queryParam: evt.target.value });
-  }
+  };
 }
 
 export default NavigationBar;
