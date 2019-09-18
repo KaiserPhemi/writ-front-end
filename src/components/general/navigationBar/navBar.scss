@@ -6,6 +6,7 @@
   border-bottom: $main-border;
   padding: 14px;
 
+  // logo styles
   .main-logo-container {
     cursor: pointer;
 
@@ -15,10 +16,11 @@
     }
   }
 
-  // search bar styling
+  // search bar styles
   .main-search-bar {
 
     label {
+      display: flex;
       border: $main-border;
       padding: 5px;
       border-radius: 3px;
@@ -30,6 +32,42 @@
       }
 
       .search-icon {
+        cursor: pointer;
+      }
+    }
+  }
+
+  // menu list styles
+  .profile-menu-list-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .main-menu-list {
+      display: flex;
+      margin-right: 10px;
+
+      li {
+        list-style-type: none;
+        padding: 0 10px;
+        align-self: center;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+
+          &:hover {
+            color: #003152;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .main-display-picture {
+      img {
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
         cursor: pointer;
       }
     }
