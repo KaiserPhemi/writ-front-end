@@ -2,8 +2,8 @@
  * @desc handles actions on documents
  */
 export const documentReducer = () => {
-  switch ('NULL') {
+  switch ("NULL") {
     default:
-      return 'state';
+      return "state";
   }
 };
