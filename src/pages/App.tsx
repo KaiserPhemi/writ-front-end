@@ -16,7 +16,7 @@ const App: React.SFC = () => (
   <div className='main-container'>
     <NavigationBar />
     <div className='main-body-container'>
-      <Root store={store}/>
+      <Root store={store} />
     </div>
   </div>
 );

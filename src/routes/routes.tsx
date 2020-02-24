@@ -1,13 +1,13 @@
 // react libraries
-import * as React from 'react';
+import * as React from "react";
 
 // third-party libraries
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
+import { Provider } from "react-redux";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // components
-import HomePage from '../pages/HomePage';
-import LandingPage from '../pages/LandingPage';
+import HomePage from "../pages/HomePage";
+import LandingPage from "../pages/LandingPage";
 
 // checks if logged-in
 const loggedIn = true;
@@ -17,14 +17,14 @@ const loggedIn = true;
  * @param store redux store object
  */
 const Root = ({ store }) => {
-  return(
+  return (
     <Provider store={store}>
       <Router>
         <Switch>
           <Route
-            path='/'
+            path="/"
             exact={true}
-            render={() => loggedIn ? <HomePage /> : <LandingPage />}
+            render={() => (loggedIn ? <HomePage /> : <LandingPage />)}
           />
         </Switch>
       </Router>

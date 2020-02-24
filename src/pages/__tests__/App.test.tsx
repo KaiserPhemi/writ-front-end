@@ -16,8 +16,7 @@ describe('App Component', () => {
   const store = {};
 
   it('should render the main container', () => {
-    expect(wrapper.find('.main-container')).to.have
-      .lengthOf(1);
+    expect(wrapper.find('.main-container')).to.have.lengthOf(1);
   });
 
   it('should contain the navigation bar component', () => {
@@ -25,11 +24,10 @@ describe('App Component', () => {
   });
 
   it('should contain the root component', () => {
-    expect(wrapper.contains(<Root store={store}/>)).to.exist;
+    expect(wrapper.contains(<Root store={store} />)).to.exist;
   });
 
   it('should render the content within the main container', () => {
-    expect(wrapper.find('.main-body-container')).to.have
-      .lengthOf(1);
+    expect(wrapper.find('.main-body-container')).to.have.lengthOf(1);
   });
 });
