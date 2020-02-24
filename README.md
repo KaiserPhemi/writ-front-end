@@ -1,6 +1,6 @@
 # writ-front-end
 
-[![CircleCI](https://circleci.com/gh/KaiserPhemi/doqman-dms-fend.svg?style=svg&circle-token=b33294a27e4bc6354547490dccf4348edda04169)](https://circleci.com/gh/KaiserPhemi/doqman-dms-fend)
+[![CircleCI](https://circleci.com/gh/KaiserPhemi/writ-front-end/tree/develop.svg?style=svg)](https://circleci.com/gh/KaiserPhemi/writ-front-end/tree/develop)
 [![Coverage Status](https://coveralls.io/repos/github/KaiserPhemi/writ-front-end/badge.svg?branch=develop)](https://coveralls.io/github/KaiserPhemi/writ-front-end?branch=develop)
 
 - The Front-End for the `doqman` Document Management System(DMS): A simple Document Management System complete with roles and privileges. Each document defines access rights and the document defines which roles can access it.

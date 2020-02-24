@@ -11,6 +11,7 @@
     "lint": "tslint -t stylish 'src/**/*.{ts,tsx}'",
     "test": "jest",
     "test:watch": "npm test -- --watch",
+    "coverage": "NODE_ENV=test nyc --reporter=text-lcov mocha --config .mocharc.js models/**/*.test.js src/**/**/*.test.js | coveralls",
     "copy:html": "cp src/index.html dist/",
     "copy:images": "cp assets/images/* dist/",
     "clean:dist": "rm -rf ./dist && mkdir dist"
@@ -26,6 +27,7 @@
     "enzyme-to-json": "^3.3.5",
     "jest": "^24.5.0",
     "jest-transform-stub": "^2.0.0",
+    "nyc": "^15.0.0",
     "react-router-dom": "^4.4.0",
     "redux-devtools-extension": "^2.13.8",
     "redux-immutable-state-invariant": "^2.1.0",
