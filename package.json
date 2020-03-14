@@ -1,13 +1,17 @@
 {
   "name": "doqman-dms-fend",
   "version": "2.0.0",
+  "engines": {
+    "node": "12.14.x"
+  },
   "description": "Front-End repo for the doqman Document Management System",
   "repository": "git@github.com:KaiserPhemi/doqman-dms-fend.git",
   "author": "Oluwafemi Akinwa <andela-oakinwa@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config webpack/webpack.prod.js",
-    "start": "webpack-dev-server --mode development --open",
+    "start": "node server.js",
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --open",
     "lint": "tslint -t stylish 'src/**/*.{ts,tsx}'",
     "test": "jest",
     "test:watch": "npm test -- --watch",
@@ -28,7 +32,6 @@
     "enzyme-to-json": "^3.3.5",
     "jest": "^24.5.0",
     "jest-transform-stub": "^2.0.0",
-    "react-router-dom": "^4.4.0",
     "redux-devtools-extension": "^2.13.8",
     "redux-immutable-state-invariant": "^2.1.0",
     "source-map-loader": "^0.2.4",
@@ -58,6 +61,7 @@
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "webpack-md5-hash": "^0.0.6"
+    "webpack-md5-hash": "^0.0.6",
+    "winston": "^3.2.1"
   }
 }

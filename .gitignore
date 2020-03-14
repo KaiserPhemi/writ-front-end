@@ -80,6 +80,7 @@ typings/
 .dynamodb/
 
 # misc
+.DS_Store
 .vscode
 dist/
 .gitignore
