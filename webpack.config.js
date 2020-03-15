@@ -22,6 +22,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Writ App",
       template: "./src/index.html",
+      favicon: "assets/images/favicon.ico",
       filename: "index.html",
       hash: true,
       minify: true
