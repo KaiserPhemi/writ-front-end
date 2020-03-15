@@ -6,9 +6,9 @@ const WebpackMd5Hash = require("webpack-md5-hash");
 // main configuration
 module.exports = {
   mode: process.env.NODE_ENV === "development" ? "development" : "production",
-  entry: "./src/index.tsx",
+  entry: "./src/Index.tsx",
   output: {
-    filename: "[name].[hash].js",
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist")
   },
   devServer: {
