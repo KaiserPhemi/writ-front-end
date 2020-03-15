@@ -6,7 +6,7 @@ const WebpackMd5Hash = require("webpack-md5-hash");
 // main configuration
 module.exports = {
   mode: process.env.NODE_ENV === "development" ? "development" : "production",
-  entry: "./src/Index.tsx",
+  entry: { app: "./src/Index.tsx" },
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist")
@@ -14,16 +14,17 @@ module.exports = {
   devServer: {
     historyApiFallback: true
   },
-  devtool: process.env.NODE_ENV === "development" ? "source-map" : "eval",
+  devtool: process.env.NODE_ENV === "development" ? "source-map" : false,
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"]
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: "Writ App",
       template: "./src/index.html",
       filename: "index.html",
-      inject: false,
-      hash: true
+      hash: true,
+      minify: true
     }),
     new WebpackMd5Hash()
   ],
